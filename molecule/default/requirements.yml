@@ -1,8 +1,8 @@
 ---
 
-[]
-
-# Duplicate any dependencies in the role's `meta/main.yml` here.
-# For example:
-# - name: home_folders
-#   src: https://github.com/mtik00/ansible-role-home-folders.git
+- name: home_folders
+  src: https://github.com/mtik00/ansible-role-home-folders.git
+- name: home_bin
+  src: https://github.com/mtik00/ansible-role-home-bin.git
+- name: dotfiles
+  src: https://github.com/mtik00/ansible-role-dotfiles.git

@@ -1,7 +1,12 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
+  gather_facts: true
+  vars:
+    github_username: test
+    git_name: Jane Doe
+    git_email: test@example.com
+    binary_dir: /tmp
   tasks:
     - name: "Include mtik00.saml2aws"
       ansible.builtin.include_role:

@@ -3,8 +3,17 @@
 
 - name: Verify
   hosts: all
-  gather_facts: false
+  gather_facts: true
+  vars:
+    github_username: test
+    git_name: Jane Doe
+    git_email: test@example.com
+    binary_dir: /tmp
   tasks:
-    - name: Example assertion
+    - name: saml2aws stat
+      ansible.builtin.stat:
+        path: "{{ binary_dir }}/saml2aws"
+      register: saml2aws
+    - name: saml2aws binary exists
       ansible.builtin.assert:
-        that: true
+        that: saml2aws.stat.isreg
