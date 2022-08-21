@@ -17,7 +17,7 @@ galaxy_info:
   galaxy_tags: []
 
 dependencies:
-  - role: mtk00.dotfiles
+  - role: mtik00.dotfiles
     src: git+https://github.com/mtik00/ansible-role-dotfiles.git
-  - role: mtk00.home_folders
+  - role: mtik00.home_folders
     src: git+https://github.com/mtik00/ansible-role-home-folders.git
